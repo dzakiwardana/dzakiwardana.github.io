@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Dzaki Wardana – Bachelor of Information Systems</title>
+<meta name="description" content="Portofolio Muhammad Dzaki Wardana, lulusan Sistem Informasi Universitas Gunadarma. Pengembangan sistem informasi dan website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F7FB; --surface:#FFFFFF; --ink:#0F1B2D; --muted:#4F5F78; --line:#D6DEEA; --accent:#2B4C9B; --accent-ink:#fff;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif; --body:"Figtree","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0E141F; --surface:#151D2B; --ink:#E8EEF7; --muted:#9BA9C0; --line:#26324A; --accent:#8FB0FF; --accent-ink:#101826}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0}
+header.top strong{font:700 1.05rem var(--head)}
+nav a{margin-left:1.5rem;text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,6vw,4.5rem);align-items:center;padding:clamp(2.5rem,8vw,5.5rem) 0}
+h1{font:800 clamp(3rem,9vw,6.25rem)/.94 var(--head);letter-spacing:-.03em}
+.foto{display:block;width:104px;height:104px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:3px solid var(--ink);margin-bottom:1.5rem;background:var(--surface)}
+.role{margin-top:1.5rem;font:500 1.3rem/1.4 var(--head)}
+.lead{margin-top:1rem;max-width:34rem;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-block;padding:.8rem 1.35rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .15s}
+
+/* percakapan PakBar Assistant */
+.chat{background:var(--surface);border:1.5px solid var(--ink);border-radius:20px;padding:1.1rem;box-shadow:8px 8px 0 var(--accent)}
+.chat-head{display:flex;align-items:center;gap:.6rem;padding-bottom:.9rem;border-bottom:1px solid var(--line);font:700 .95rem var(--head)}
+.dot{width:10px;height:10px;border-radius:50%;background:#3BA55D}
+.msgs{display:flex;flex-direction:column;gap:.7rem;padding:1rem 0 .4rem;min-height:15rem}
+.m{max-width:88%;padding:.65rem .9rem;border-radius:16px;font-size:.95rem;line-height:1.5;opacity:0;transform:translateY(8px);animation:in .4s forwards}
+.m.u{align-self:flex-end;background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:4px}
+.m.b{align-self:flex-start;background:var(--bg);border-bottom-left-radius:4px}
+.m:nth-child(1){animation-delay:.5s}.m:nth-child(2){animation-delay:1.6s}.m:nth-child(3){animation-delay:3.2s}.m:nth-child(4){animation-delay:4.3s}
+@keyframes in{to{opacity:1;transform:none}}
+.chat small{display:block;margin-top:.6rem;color:var(--muted);font-size:.8rem}
+
+section{padding:clamp(2.5rem,7vw,4.5rem) 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.75rem,4vw,2.4rem)/1.1 var(--head);letter-spacing:-.02em;margin-bottom:2rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,4rem)}
+.about p+p{margin-top:1rem}
+.skills{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0;align-content:flex-start}
+.skills li{padding:.45rem .95rem;border:1.5px solid var(--line);border-radius:999px;background:var(--surface);font-weight:500}
+
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem;list-style:none;padding:0}
+.tags li{font-size:.85rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:.15rem .6rem;border-radius:6px}
+.links{margin-top:1rem;display:flex;gap:1.25rem;flex-wrap:wrap}
+.links a{font-weight:600;color:var(--accent)}
+
+.edu{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;align-items:baseline}
+.edu strong{font:700 1.25rem var(--head)}
+.edu span{color:var(--muted)}
+.contact p{max-width:34rem;color:var(--muted);margin-bottom:1.5rem}
+.contact .cta{margin-top:0}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.9rem}
+
+
+body{background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:24px 24px}
+.foto{box-shadow:5px 5px 0 var(--accent)}
+.proj{display:grid;grid-template-columns:1.25fr 1fr;gap:2rem;align-items:center;background:var(--surface);border:1.5px solid var(--ink);border-radius:24px;padding:1.5rem;margin-bottom:2rem}
+.proj.rev{grid-template-columns:1fr 1.25fr}.proj.rev .shots{order:2}
+.proj.feat{grid-template-columns:1fr;gap:1.75rem;padding:1.75rem;box-shadow:10px 10px 0 var(--accent)}
+.proj.feat .shots{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+.proj h3{font:700 1.5rem/1.2 var(--head)}
+.proj.feat h3{font-size:2rem}
+.proj .info p{margin-top:.8rem;max-width:40rem}
+.proj.feat .info{display:grid;grid-template-columns:1fr 1.2fr;gap:1rem 3rem}
+.proj.feat .info p{margin-top:0}
+.badge{display:inline-block;margin-bottom:.8rem;padding:.2rem .7rem;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:.82rem;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem;list-style:none;padding:0}
+.tags li{font-size:.85rem;color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:.15rem .6rem;border-radius:6px}
+.pts{margin:.9rem 0 0 1.1rem;color:var(--muted)}
+.links{margin-top:1rem;display:flex;gap:1.25rem;flex-wrap:wrap}
+.links a{font-weight:600;color:var(--accent)}
+/* bingkai browser untuk screenshot */
+.shot{position:relative;border:1.5px solid var(--ink);border-radius:12px;overflow:hidden;background:var(--bg);transition:transform .2s}
+.shot:hover{transform:translateY(-4px)}
+.shot::before{content:"";display:block;height:22px;background:var(--line);background-image:radial-gradient(circle,var(--muted) 3px,transparent 3.5px);background-size:14px 22px;background-repeat:repeat-x;background-position:8px 50%;width:100%;clip-path:inset(0)}
+.shot .ph{display:grid;place-items:center;aspect-ratio:16/10;padding:1rem;text-align:center;color:var(--muted);font-size:.85rem;background:repeating-linear-gradient(135deg,transparent 0 12px,var(--line) 12px 13px)}
+.shot .ph b{display:block;color:var(--ink);font-family:var(--head)}
+.shot img{position:absolute;left:0;right:0;top:22px;bottom:0;width:100%;height:calc(100% - 22px);object-fit:cover;object-position:top;background:var(--surface)}
+@media (max-width:760px){.proj,.proj.rev,.proj.feat,.proj.feat .info{grid-template-columns:1fr}.proj.rev .shots{order:0}.proj.feat .shots{grid-template-columns:1fr}.proj.feat{box-shadow:6px 6px 0 var(--accent)}}
+@media (prefers-reduced-motion:reduce){.shot{transition:none}.shot:hover{transform:none}}
+@media (max-width:760px){
+  .hero,.about{grid-template-columns:1fr}
+  nav a{margin-left:1rem}
+  .chat{box-shadow:6px 6px 0 var(--accent)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .m{animation:none;opacity:1;transform:none}
+  .btn{transition:none}.btn:hover{transform:none}
+}
+.hero .shot{box-shadow:8px 8px 0 var(--accent)}
+.bars{list-style:none;padding:0;display:grid;gap:1.1rem}
+.bar-top{display:flex;justify-content:space-between;font-weight:600;margin-bottom:.4rem}
+.bar-top span:last-child{color:var(--muted);font-weight:500}
+.bar{height:10px;border-radius:999px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;width:var(--v);background:var(--accent);border-radius:999px;animation:grow 1s ease-out}
+@keyframes grow{from{width:0}}
+@media (prefers-reduced-motion:reduce){.bar i{animation:none}}
+.shot img{position:static;display:block;width:100%;height:auto;object-fit:initial}
+.shot:has(img) .ph{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <strong>Dzaki Wardana</strong>
+    <nav aria-label="Navigasi utama">
+      <a href="#proyek">Proyek</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <img class="foto" src="foto.jpeg" alt="Foto Muhammad Dzaki Wardana" width="104" height="104">
+        <h1>Muhammad Dzaki Wardana</h1>
+        <p class="role">Bachelor of Information Systems, Universitas Gunadarma.</p>
+        <p class="lead">Saya membangun website dan sistem informasi untuk instansi dan usaha kecil, termasuk chatbot AI untuk layanan pemerintahan.</p>
+        <div class="cta">
+          <a class="btn main" href="#proyek">Lihat proyek</a>
+          <a class="btn" href="mailto:wardana.dzaki@gmail.com">Kirim email</a>
+        </div>
+      </div>
+
+      <figure class="shot" aria-label="Live chat PakBar">
+  <div class="ph"><span><b>Live chat</b>livechat.png</span></div>
+  <img src="livechat.png" alt="Screenshot live chat PakBar Assistant" onerror="this.remove()">
+</figure>
+    </div>
+
+    <section id="proyek">
+      <h2>Proyek</h2>
+
+      <article class="proj feat">
+        <div class="shots">
+          <figure class="shot"><div class="ph"><span><b>Beranda kelurahan</b>berandakelurahan.png</span></div><img src="berandakelurahan.png" alt="Screenshot Beranda kelurahan" loading="lazy" onerror="this.remove()"></figure>
+          <figure class="shot"><div class="ph"><span><b>Chatbot AI</b>chatai.png</span></div><img src="chatai.png" alt="Screenshot Chatbot AI" loading="lazy" onerror="this.remove()"></figure>
+        </div>
+        <div class="info">
+          <div>
+            <h3>Website Kelurahan Pakulonan Barat dengan AI</h3>
+            <ul class="tags"><li>Laravel</li><li>MySQL</li><li>NLP</li><li>Chatbot</li></ul>
+            <div class="links"><a href="https://kelurahanpakulonanbarat.my.id" target="_blank" rel="noopener">Lihat website</a><!-- <a href="LINK_GITHUB">Kode di GitHub</a> --></div>
+          </div>
+          <div>
+            <p>Website informasi kelurahan dengan chatbot "PakBar Assistant" yang menjawab pertanyaan warga seputar layanan pemerintahan, supaya warga tidak perlu datang hanya untuk bertanya.</p>
+            <ul class="pts">
+              <li>Halaman publik: berita, pengumuman, layanan, dan pengaduan</li>
+              <li>Panel admin untuk mengelola konten</li>
+              <li>Chatbot berbasis NLP untuk tanya jawab layanan</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="shots"><figure class="shot"><div class="ph"><span><b>Stok warung</b>stokwarung.png</span></div><img src="stokwarung.png" alt="Screenshot Stok warung" loading="lazy" onerror="this.remove()"></figure></div>
+        <div class="info">
+          <h3>Stok Barang Warung Kelontong</h3>
+          <ul class="tags"><li>Laravel</li><li>MySQL</li></ul>
+          <p>Sistem inventaris sederhana untuk mencatat barang, stok masuk dan keluar, serta laporan penjualan. Ada pencarian barang, notifikasi stok menipis, dan cetak laporan transaksi.</p>
+        </div>
+      </article>
+
+      <article class="proj rev">
+        <div class="shots"><figure class="shot"><div class="ph"><span><b>Jawepe</b>jawepe.png</span></div><img src="jawepe.png" alt="Screenshot Jawepe" loading="lazy" onerror="this.remove()"></figure></div>
+        <div class="info">
+          <h3>Website Wedding Organizer Jawepe</h3>
+          <ul class="tags"><li>Web</li><li>Responsive</li></ul>
+          <p>Platform promosi jasa penyelenggara pernikahan: paket layanan, galeri portofolio acara, testimoni klien, jadwal ketersediaan, dan formulir pemesanan.</p>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="shots"><figure class="shot"><div class="ph"><span><b>Toko kue</b>tokokue.png</span></div><img src="tokokue.png" alt="Screenshot Toko kue" loading="lazy" onerror="this.remove()"></figure></div>
+        <div class="info">
+          <h3>Website Toko Kue</h3>
+          <ul class="tags"><li>E-commerce</li><li>Web</li></ul>
+          <p>Toko online untuk kue dan pastry dengan katalog produk, keranjang belanja, pemesanan custom cake, dan galeri foto.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="tentang" class="about">
+      <div>
+        <h2>Tentang saya</h2>
+        <p>Saya berminat di bidang pengembangan sistem informasi dan website, dengan pengalaman menggunakan Laravel, PHP, MySQL, HTML, CSS, dan JavaScript.</p>
+        <p>Saya terbiasa mengerjakan proses lengkap: merancang database, membangun fitur, sampai menulis dokumentasi teknis.</p>
+        <p>Di proyek skripsi, saya menggabungkan website pemerintahan dengan chatbot AI.</p>
+      </div>
+      <div>
+        <h2>Keahlian</h2>
+       <ul class="bars">
+        <li><div class="bar-top"><span>Laravel</span><span>80%</span></div><div class="bar"><i style="--v:80%"></i></div></li>
+        <li><div class="bar-top"><span>PHP</span><span>80%</span></div><div class="bar"><i style="--v:80%"></i></div></li>
+        <li><div class="bar-top"><span>MySQL</span><span>75%</span></div><div class="bar"><i style="--v:75%"></i></div></li>
+        <li><div class="bar-top"><span>Responsive web design</span><span>75%</span></div><div class="bar"><i style="--v:75%"></i></div></li>
+        <li><div class="bar-top"><span>Systems design</span><span>70%</span></div><div class="bar"><i style="--v:70%"></i></div></li>
+        <li><div class="bar-top"><span>AI untuk knowledge work</span><span>80%</span></div><div class="bar"><i style="--v:80%"></i></div></li>
+       </ul>
+      </div>
+    </section>
+
+    <section id="pendidikan">
+      <h2>Pendidikan</h2>
+      <div class="edu"><strong>Universitas Gunadarma, Sistem Informasi</strong><span>2022–2026</span></div>
+      <p style="color:var(--muted)">IPK 3,70/4,00</p>
+    </section>
+
+    <section id="kontak" class="contact">
+      <h2>Mari ngobrol</h2>
+      <p>Sedang mencari posisi di bidang IT. Berdomisili di Alam Sutera, Kota Tangerang.</p>
+      <div class="cta">
+        <a class="btn main" href="mailto:wardana.dzaki@gmail.com">wardana.dzaki@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/muhammad-dzaki-wardana-55a4b721b/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Muhammad Dzaki Wardana</footer>
+</div>
+</body>
+</html>
